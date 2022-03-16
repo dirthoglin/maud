@@ -1,0 +1,10 @@
+#directory
+linux
+
+#trash
+*~
+
+#binary
+maud*
+*.o
+*.out
