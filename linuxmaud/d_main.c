@@ -31,6 +31,7 @@ int maudmain()
     O_Menu(
       "Main menu",
       "Exit",
+      "ChangeBase",
       "Converter",
       "Calculator",
       NULL
@@ -40,6 +41,11 @@ int maudmain()
 
     if(!strcmp(option_selected, "Exit"))
       exit(EXIT_SUCCESS);
+    else if(!strcmp(option_selected, "ChangeBase"))
+    {
+      printf("Write from base: "); scanf("%i", &frombase);
+      printf("Write to base: "); scanf("%i", &tobase);
+    }
     else if(!strcmp(option_selected, "Converter"))
     {
       int T;
