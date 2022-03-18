@@ -24,8 +24,34 @@ int maudmain()
 {
   printf("%i\n", toDeci(2,"1000"));
   printf("%s\n", fromDeci(2, 8));
+
+  O_Menu(
+    "Main menu",
+    "Exit",
+    "Option 1",
+    "Option 2",
+    NULL
+    );
   
   return 0;
+}
+
+// Options menu
+void O_Menu(char* title,char* option,...)
+{
+  printf("\t%s\n", title);
+
+  va_list argptr;
+  va_start(argptr, option);
+  char* actual = option;
+
+  while(actual != NULL)
+  {
+    printf("> %s\n", actual);
+    actual = va_arg(argptr, char*);
+  }
+
+  return;
 }
 
 void I_Error(char *error, ...)
