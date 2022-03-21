@@ -1,5 +1,6 @@
 #directory
 linux
+obj
 
 #trash
 *~
@@ -8,3 +9,4 @@ linux
 maud*
 *.o
 *.out
+*.exe

@@ -19,6 +19,7 @@ DESCRIPTION:
 #include <string.h>
 
 #include <d_main.h>
+#include <i_main.h>
 #include <l_converter.h>
 
 int maudmain()
@@ -26,9 +27,21 @@ int maudmain()
   int frombase = 10, tobase = 2;
   char* option_selected = malloc(10 * sizeof(char));
 
+  for(int i = 0;i < argc;i++)
+  {
+    if(!strcmp(argv[i], "--help"))
+    {
+      puts(
+        "maud is a number conversion\n"
+        "the code goes here: https://github.com/dirthoglin/maud"
+        );
+      exit(EXIT_SUCCESS);
+    }
+  }
+
   while(1)
   {
-    O_Menu(
+    I_Menu(
       "Main menu",
       "Exit",
       "ChangeBase",
@@ -104,8 +117,7 @@ int maudmain()
   return 0;
 }
 
-// Options menu
-void O_Menu(char* title,char* option,...)
+void I_Menu(char* title,char* option,...)
 {
   printf("\t%s\n", title);
 

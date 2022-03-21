@@ -4,7 +4,7 @@ CFLAGS=-I. -Wall -std=c99
 OUTBIN=maud
 
 # subdirectory for objects
-O=linux
+O=obj
 
 # not too sophisticated dependency
 OBJS=	$(O)/i_main.o 	\
@@ -15,8 +15,9 @@ OBJS=	$(O)/i_main.o 	\
 all:	 $(O)/$(OUTBIN)
 
 clean:
-	rm -f *.o *~
-	rm -f linux/*
+	del *.o
+	del *~
+	del /S .\$(O)\*
 
 $(O)/$(OUTBIN):	$(OBJS) $(O)/i_main.o
 	$(CC) $(CFLAGS) $(OBJS) -o $(O)/$(OUTBIN)

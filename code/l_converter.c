@@ -42,10 +42,10 @@ int toDeci(int base,char *str)
   for (i = len - 1; i >= 0; i--)
   {
     if (val(str[i]) >= base)
-      I_Error("toDeci: Invalid Number");
+      I_Error("toDeci: '%c' invalid number in base %i", str[i], base);
 
     num += val(str[i]) * power;
-    power = power * base;
+    power *= base;
   }
 
   return num;

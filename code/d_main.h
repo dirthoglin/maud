@@ -17,7 +17,7 @@ DESCRIPTION:
 #define _MAUD_MAIN_
 
 int maudmain();
-void O_Menu(char* title,char* option,...);
+void I_Menu(char* title,char* option,...);
 void I_Error (char *error, ...);
 
 #endif
