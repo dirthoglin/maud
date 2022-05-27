@@ -13,7 +13,7 @@ DESCRIPTION:
   Functions of main
 */
 
-int argc;
-char** argv;
+static int argc;
+static char** argv;
 
 /*=====  End of main header  ======*/
