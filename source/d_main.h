@@ -19,6 +19,8 @@ DESCRIPTION:
 int maudmain();
 void I_Menu(char* title,char* option,...);
 void I_Error (char *error, ...);
+void delay(int mseconds);
+void CheckParam();
 
 #endif
 
